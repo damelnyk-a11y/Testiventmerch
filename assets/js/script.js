@@ -3,6 +3,32 @@
 // --- DATA LAYER (Simulating the output of the requested research) ---
 // Данные для инсайтов, идей и референсов мерча
 
+// ИНСТРУКЦИЯ ПО ДОБАВЛЕНИЮ И РЕДАКТИРОВАНИЮ КАРТОЧЕК:
+// 1. merchData - массив объектов, каждый объект представляет одну карточку.
+// 2. Обязательные поля:
+//    - id: уникальный идентификатор, например "REF-009"
+//    - brand: название бренда/коллаборации, например "PSG x Dior"
+//    - year: год выпуска, строка, например "2023"
+//    - category: категория ("apparel", "accessories", "packaging", "gifting")
+//    - item: название товара, например "Varsity Jacket"
+//    - idea: краткое описание идеи
+//    - design: описание дизайна
+//    - tech: техника производства
+//    - packaging: описание упаковки
+//    - price: уровень цены ("budget", "mid", "premium", "luxury")
+//    - relevance: почему это релевантно для PIN-UP/Redcore
+//    - takeaways: массив строк с ключевыми выводами
+//    - tags: массив тегов для фильтрации
+//    - vibe: CSS градиент для фона, например "linear-gradient(135deg, #1a202c 50%, #2d3748 50%)"
+//    - image: путь к превью-изображению, например "assets/images/previews/psg-dior.jpg" или URL "https://example.com/image.jpg"
+// 3. Опциональные поля:
+//    - links: массив ссылок на источники, например ["hypebeast.com", "about.nike.com"]
+// 4. После добавления нового объекта в merchData, карточка автоматически появится в Explorer.
+// 5. Для редактирования измените значения в объекте.
+// 6. Убедитесь, что id уникален и соответствует формату REF-XXX.
+// 7. Изображения превью хранятся в папке assets/images/previews/. Добавляйте JPG/PNG файлы туда и указывайте относительный путь.
+// 8. Дополнительные фото-референсы кладите в папку assets/references/ с правильными названиями файлов (например, psg-dior-varsity-jacket.jpg).
+
 const insightsData = [
     { title: "Tonal Embroidery", desc: "Скрытая роскошь. Логотипы вышиваются нитками в тон ткани. Тренд 'Quiet Luxury'." },
     { title: "Stadium Scarf Revival", desc: "Жаккардовые шарфы вышли за пределы стадионов в стритвир (как у Acne Studios)." },
@@ -37,7 +63,8 @@ const merchData = [
         relevance: "Идеальный референс для создания 'Главной' вещи коллекции. Можно адаптировать формат куртки с гербом, созданным к 10-летию.",
         takeaways: ["Использование шенилла для лого", "Комбинация двух фактур (матовая шерсть + кожа)", "Тональные пуговицы-кнопки"],
         tags: ["sport collab", "heritage", "premium"],
-        vibe: "linear-gradient(135deg, #1a202c 50%, #2d3748 50%)", icon: "🧥"
+        vibe: "linear-gradient(135deg, #1a202c 50%, #2d3748 50%)", image: "assets/images/previews/PSG-x-Walk-in-Paris-Teddy-Jacket.png",
+        links: ["about.nike.com", "hypebeast.com", "www.wonderlandmagazine.com"]
     },
     {
         id: "REF-002",
@@ -53,7 +80,8 @@ const merchData = [
         relevance: "Отличный вариант для массового/сотруднического мерча. Выглядит стильно, практично.",
         takeaways: ["Матовый нейлон вместо глянца", "Микро-логотип вместо билборда на груди", "Скрытые карманы"],
         tags: ["streetwear", "retro", "functional"],
-        vibe: "linear-gradient(45deg, #2b6cb0, #2c5282)", icon: "🧥"
+        vibe: "linear-gradient(45deg, #2b6cb0, #2c5282)", image: "assets/images/previews/Aime-Leon-Dore-x-New-Balance-Nylon-Windbreaker-Black.jpg",
+        links: ["stockx.com", "hypebeast.com", "www.aimeleondore.com"]
     },
     {
         id: "REF-003",
@@ -69,7 +97,8 @@ const merchData = [
         relevance: "Направление 'Techwear' для сотрудников IT-отделов Redcore.",
         takeaways: ["Плотная ткань без начеса внутри", "Водонепроницаемые молнии", "Магнитный замок на капюшоне"],
         tags: ["f1", "techwear", "monochrome"],
-        vibe: "linear-gradient(to bottom, #171923, #000000)", icon: "🥋"
+        vibe: "linear-gradient(to bottom, #171923, #000000)", image: "assets/images/previews/Castore x Red Bull Racing Veste Softshell .png",
+        links: ["paddock212.com"]
     },
     {
         id: "REF-004",
@@ -85,7 +114,7 @@ const merchData = [
         relevance: "Референс для упаковки VIP-подарков партнерам PIN-UP.",
         takeaways: ["Отказ от пластика в пользу металла и картона", "Кастомный ложемент", "Карточка с приветствием от фаундеров"],
         tags: ["corporate", "packaging", "quiet luxury"],
-        vibe: "linear-gradient(135deg, #e2e8f0, #edf2f7)", icon: "🎁"
+        vibe: "linear-gradient(135deg, #e2e8f0, #edf2f7)", image: "assets/images/previews/REF-004 gifting Stripe Executive Welcome Kit (2023).png"
     },
     {
         id: "REF-005",
@@ -101,7 +130,7 @@ const merchData = [
         relevance: "Идеально для коллаборации с Sevilla FC или для фанатского дропа. Шарф - дешевый в производстве, но визуально сильный элемент.",
         takeaways: ["Использование металлизированной нити (Lurex)", "Двусторонний дизайн", "Толстая бахрома"],
         tags: ["football", "stadium core", "pattern"],
-        vibe: "linear-gradient(to right, #000000 40%, #d69e2e 40%, #d69e2e 60%, #000000 60%)", icon: "🧣"
+        vibe: "linear-gradient(to right, #000000 40%, #d69e2e 40%, #d69e2e 60%, #000000 60%)", image: "assets/images/previews/VFC_20Scarf_202-1_20Front.png"
     },
      {
         id: "REF-006",
@@ -117,7 +146,7 @@ const merchData = [
         relevance: "Создание юбилейного металлического значка 10Y, который можно крепить на любую одежду или рюкзак. Дешево, но премиально.",
         takeaways: ["Тяжелый металл", "Детальная проработка эмали", "Крепление на баттерфляй-клатч"],
         tags: ["streetwear", "hardware", "collectible"],
-        vibe: "radial-gradient(circle, #a0aec0, #4a5568)", icon: "🎖️"
+        vibe: "radial-gradient(circle, #a0aec0, #4a5568)", image: "assets/images/previews/KITH x BMW Metal Pin _ Emblem (2020).png"
     },
     {
         id: "REF-007",
@@ -133,7 +162,7 @@ const merchData = [
         relevance: "Для отправки special edition дропов инфлюенсерам.",
         takeaways: ["Голографические наклейки-пломбы", "Инструкция по уходу как арт-объект", "QR-код на скрытый плейлист"],
         tags: ["esports", "unboxing", "hype"],
-        vibe: "linear-gradient(45deg, #ff0080, #7928ca)", icon: "📦"
+        vibe: "linear-gradient(45deg, #ff0080, #7928ca)", image: "assets/images/previews/100 Thieves Drop Box (2023).png"
     },
     {
         id: "REF-008",
@@ -149,7 +178,109 @@ const merchData = [
         relevance: "Идея для создания уникального паттерна PIN-UP (например, из элементов логотипа) для печати на джерси.",
         takeaways: ["Кастомный паттерн вместо логотипа на груди", "Темные, приглушенные цвета для спорта", "Силиконовые бейджи вместо вышивки"],
         tags: ["football", "collab", "pattern"],
-        vibe: "repeating-linear-gradient(45deg, #276749, #276749 10px, #22543d 10px, #22543d 20px)", icon: "👕"
+        vibe: "repeating-linear-gradient(45deg, #276749, #276749 10px, #22543d 10px, #22543d 20px)", image: "assets/images/previews/Arsenal FC x Maharishi Pre-match Jersey (2023) .png"
+    },
+    {
+        id: "REF-009",
+        brand: "Travis Scott x SP5DER",
+        year: "2024",
+        category: "apparel",
+        item: "Hoodie",
+        idea: "Агрессивный Y2K-стайл: объемные 3D-принты (puff print), графика в виде паутины и «грязные» градиенты. Использование винтажных шрифтов в стиле рок-мерча 90-х.",
+        design: "Puff print, acid wash, chaotic details",
+        tech: "Puff print, acid wash dyeing",
+        packaging: "Standard",
+        price: "mid",
+        relevance: "Идеально для привлечения молодой аудитории и стримеров. Это формат «дропа», который создает искусственный дефицит и хайп.",
+        takeaways: ["Puff Print: использование выпуклой печати для логотипа «10 Years».", "Сложная окраска: технология Acid Wash (эффект выстиранной ткани) в темно-красных или серых тонах.", "Хаотичная верстка: мелкие детали (звезды, значки), разбросанные по рукавам и капюшону."],
+        tags: ["y2k", "streetwear", "hype"],
+        vibe: "linear-gradient(45deg, #ff0000, #000000)", image: "https://via.placeholder.com/100x100?text=Travis+Scott+x+SP5DER",
+        links: ["stockx.com"]
+    },
+    {
+        id: "REF-010",
+        brand: "Palace x McDonald's",
+        year: "2023",
+        category: "apparel",
+        item: "T-Shirt",
+        idea: "«Ироничный корпоратив». Сочетание классического, узнаваемого во всем мире логотипа с эстетикой британского скейт-бренда. Лаконичность, белый/черный/красный цвета.",
+        design: "Co-branded logo, text prints",
+        tech: "Screen print",
+        packaging: "Standard",
+        price: "mid",
+        relevance: "Показывает, как сделать корпоративный красный цвет «вкусным» и модным, а не скучным.",
+        takeaways: ["Co-branding: игра с логотипом (например, вписать элементы казино или цифру «10» в привычные формы).", "Текстовые принты: использование на футболках забавных «внутренних» фактов о компании в виде мелкого текста.", "Аксессуары: скейт-деки или лайфстайл-предметы (пепельницы, стаканы) с двойным брендингом."],
+        tags: ["ironic", "corporate", "skate"],
+        vibe: "linear-gradient(to right, #ffffff 33%, #000000 33%, #000000 66%, #ff0000 66%)", image: "https://via.placeholder.com/100x100?text=Palace+x+McDonald",
+        links: ["palacemcdonalds.com"]
+    },
+    {
+        id: "REF-011",
+        brand: "Adidas x Gucci",
+        year: "2022/23",
+        category: "apparel",
+        item: "Bomber Jacket",
+        idea: "Ретро-роскошь 70-х. Сочетание спортивных силуэтов (три полоски) с люксовыми материалами (бархат, шелк) и монограммами.",
+        design: "Monogram pattern, velvet materials",
+        tech: "Velvet fabric, embroidery",
+        packaging: "Luxury box",
+        price: "luxury",
+        relevance: "Вариант для VIP-мерча или подарков топ-менеджменту/партнерам. Подчеркивает статус и 10-летнюю историю.",
+        takeaways: ["Монограмма: создать паттерн из паттерна Pin-up и использовать его на подкладке бомберов или на сумках.", "Материалы: использовать велюр или плотный джерси вместо обычного хлопка.", "Контрастные детали: манжеты и воротники другого цвета (например, золотой на красном)."],
+        tags: ["luxury", "retro", "status"],
+        vibe: "linear-gradient(135deg, #000000, #ffffff)", image: "https://via.placeholder.com/100x100?text=Adidas+x+Gucci",
+        links: ["guccistories.com"]
+    },
+    {
+        id: "REF-012",
+        brand: "Puma x Red Bull Racing (SDS Line)",
+        year: "2024",
+        category: "apparel",
+        item: "Hoodie",
+        idea: "Технологичный «Motorsport» дизайн. Четкие линии, динамичные блоки цветов (Color-blocking) и использование технических шрифтов, напоминающих приборную панель.",
+        design: "Color-blocking, technical patches",
+        tech: "Reflective elements, patches",
+        packaging: "Standard",
+        price: "mid",
+        relevance: "Связь с драйвом, скоростью и риском. Эстетика команды, которая всегда побеждает.",
+        takeaways: ["Color-blocking: разделение худи на асимметричные цветовые зоны (красный/черный/белый).", "Технические патчи: использование нашивок (patches) вместо обычной печати.", "Функциональность: добавление рефлективных (светоотражающих) элементов."],
+        tags: ["motorsport", "tech", "speed"],
+        vibe: "linear-gradient(45deg, #ff0000, #000000)", image: "https://via.placeholder.com/100x100?text=Puma+x+Red+Bull",
+        links: ["puma-motorsport.com"]
+    },
+    {
+        id: "REF-013",
+        brand: "Mandarin Oriental x Sporty & Rich",
+        year: "2026",
+        category: "apparel",
+        item: "Oversize Hoodie",
+        idea: "Wellness-эстетика и «Old Money». Очень чистый дизайн, пастельные тона (но в вашем случае — глубокий красный), вышитые гербы и загородный стиль.",
+        design: "Embroidered crests, heavyweight cotton",
+        tech: "Embroidery, heavyweight fabric",
+        packaging: "Luxury set",
+        price: "premium",
+        relevance: "Юбилейный мерч, который люди захотят носить в повседневной жизни. Выглядит как одежда из элитного закрытого клуба.",
+        takeaways: ["Вышивка: только вышитые логотипы (никакой пленки или краски).", "Oversize крой: тяжелый хлопок (Heavyweight cotton), который держит форму.", "Набор: создание «комплекта выходного дня» (худи + шорты + высокая белая носка с лого)."],
+        tags: ["wellness", "old money", "elite"],
+        vibe: "linear-gradient(to bottom, #ffcccc, #cc0000)", image: "https://via.placeholder.com/100x100?text=Mandarin+Oriental+x+Sporty",
+        links: ["mediacentre.com"]
+    },
+    {
+        id: "REF-014",
+        brand: "Louis Vuitton x League of Legends",
+        year: "2024",
+        category: "apparel",
+        item: "Scuba Jacket",
+        idea: "Цифровой футуризм. Использование материалов типа неопрена, камуфляжа «pixel» и серебристых элементов.",
+        design: "Pixel camo, metallic details",
+        tech: "Scuba fabric, digital gradients",
+        packaging: "Standard",
+        price: "luxury",
+        relevance: "Прямая отсылка к IT-сфере, геймингу и технологичности вашего продукта.",
+        takeaways: ["Ткани: использование Scuba-ткани или технологичного нейлона.", "Градиенты: переход из черного в ярко-красный через «цифровой» шум.", "Кибер-детали: фурнитура (молнии, карабины) необычных форм или ярких цветов."],
+        tags: ["futurism", "gaming", "tech"],
+        vibe: "linear-gradient(45deg, #000000, #ff0000)", image: "https://via.placeholder.com/100x100?text=Louis+Vuitton+x+LoL",
+        links: ["metalmagazine.com"]
     }
 ];
 
@@ -321,11 +452,11 @@ function renderMerchGrid(data) {
         if(item.price === 'premium' || item.price === 'luxury') priceDots = '💰💰💰';
 
         const cardHTML = `
-            <div class="card bg-white rounded-xl border border-brand-gray overflow-hidden shadow-sm hover:shadow-lg transition-all cursor-pointer flex flex-col h-full" onclick='openModal(${JSON.stringify(item)})'>
+            <div class="card bg-white rounded-xl border border-brand-gray overflow-hidden shadow-sm hover:shadow-lg transition-all cursor-pointer flex flex-col h-full" onclick="openModal('${item.id}')">
                 <div class="p-2 pb-0">
                     <!-- Abstract Representation of Item -->
-                    <div class="vibe-block" style="background: ${item.vibe};">
-                        ${item.icon}
+                    <div class="vibe-block">
+                        <img src="${item.image}" alt="${item.brand}" class="w-full h-full object-cover rounded">
                     </div>
                 </div>
                 <div class="p-4 flex-grow flex flex-col">
@@ -367,14 +498,15 @@ function filterMerch(category) {
 }
 
 // Modal Logic
-function openModal(item) {
+function openModal(id) {
+    const item = merchData.find(i => i.id === id);
     const modal = document.getElementById('item-modal');
     const content = document.getElementById('modal-content');
 
     // Build modal HTML
     content.innerHTML = `
         <div class="h-32 w-full flex items-center justify-center text-6xl" style="background: ${item.vibe}; border-top-left-radius: 1rem; border-top-right-radius: 1rem;">
-            ${item.icon}
+            <img src="${item.image}" alt="${item.brand}" class="w-16 h-16 object-cover rounded">
         </div>
         <div class="p-6 sm:p-8">
             <div class="flex items-center gap-3 mb-2">
@@ -410,6 +542,17 @@ function openModal(item) {
                     ${item.takeaways.map(t => `<li>${t}</li>`).join('')}
                 </ul>
             </div>
+
+            ${item.links ? `
+            <div class="bg-gray-50 p-5 rounded-lg border border-brand-gray mt-4">
+                <h4 class="font-bold text-brand-dark mb-2 flex items-center gap-2">
+                    <span class="text-brand-red">🔗</span> Ссылки
+                </h4>
+                <ul class="list-disc pl-5 text-sm space-y-1">
+                    ${item.links.map(link => `<li><a href="https://${link}" target="_blank" class="text-brand-red hover:underline">${link}</a></li>`).join('')}
+                </ul>
+            </div>
+            ` : ''}
         </div>
     `;
 

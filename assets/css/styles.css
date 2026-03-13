@@ -19,9 +19,9 @@ body {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    height: 30vh;
-    min-height: 250px;
-    max-height: 350px;
+    height: 25vh;
+    min-height: 200px;
+    max-height: 300px;
 }
 @media (min-width: 768px) {
     .chart-container {
@@ -39,17 +39,23 @@ body {
 /* Vibe Canvas (CSS based abstract representation of merch since no images/SVG allowed) */
 .vibe-block {
     width: 100%;
-    height: 160px;
+    height: 120px;
     border-radius: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3rem;
+    font-size: 2rem;
     color: rgba(255,255,255,0.8);
     text-shadow: 0 2px 4px rgba(0,0,0,0.1);
     background-size: cover;
     background-position: center;
     transition: transform 0.3s ease;
+}
+@media (min-width: 640px) {
+    .vibe-block {
+        height: 160px;
+        font-size: 3rem;
+    }
 }
 .card:hover .vibe-block {
     transform: scale(1.02);
