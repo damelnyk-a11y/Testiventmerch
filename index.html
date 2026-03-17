@@ -57,15 +57,15 @@
     <!-- Фиксированная навигационная панель с вкладками для переключения секций -->
     <nav class="fixed w-full z-50 glass-panel shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
+            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center py-2 sm:py-0 sm:h-16 gap-2 sm:gap-0">
                 <div class="flex items-center">
                     <span class="text-xl font-bold tracking-tighter uppercase text-brand-dark">PIN-UP <span class="text-brand-red">10Y</span></span>
                     <span class="ml-2 text-sm text-brand-muted hidden sm:block font-mono">| Merch Intelligence</span>
                 </div>
-                <div class="flex items-center space-x-2 sm:space-x-6">
-                    <button onclick="switchTab('dashboard')" id="nav-dashboard" class="nav-btn tab-active text-brand-muted hover:text-brand-dark transition-colors px-1 py-3 sm:py-5 text-xs sm:text-sm uppercase tracking-wide">Аналитика</button>
-                    <button onclick="switchTab('explorer')" id="nav-explorer" class="nav-btn text-brand-muted hover:text-brand-dark transition-colors px-1 py-3 sm:py-5 text-xs sm:text-sm uppercase tracking-wide">Референсы</button>
-                    <button onclick="switchTab('strategy')" id="nav-strategy" class="nav-btn text-brand-muted hover:text-brand-dark transition-colors px-1 py-3 sm:py-5 text-xs sm:text-sm uppercase tracking-wide">Стратегия</button>
+                <div class="mobile-tab-row flex items-center gap-4 sm:gap-6 overflow-x-auto pb-1 sm:pb-0">
+                    <button onclick="switchTab('dashboard')" id="nav-dashboard" class="nav-btn tab-active text-brand-muted hover:text-brand-dark transition-colors px-1 py-2 sm:py-5 text-[11px] sm:text-sm uppercase tracking-wide whitespace-nowrap">Аналитика</button>
+                    <button onclick="switchTab('explorer')" id="nav-explorer" class="nav-btn text-brand-muted hover:text-brand-dark transition-colors px-1 py-2 sm:py-5 text-[11px] sm:text-sm uppercase tracking-wide whitespace-nowrap">Референсы</button>
+                    <button onclick="switchTab('strategy')" id="nav-strategy" class="nav-btn text-brand-muted hover:text-brand-dark transition-colors px-1 py-2 sm:py-5 text-[11px] sm:text-sm uppercase tracking-wide whitespace-nowrap">Стратегия</button>
                 </div>
             </div>
         </div>
@@ -73,29 +73,29 @@
 
     <!-- Main Content -->
     <!-- Основной контейнер с отступом для навигации -->
-    <main class="pt-20 sm:pt-24 pb-8 sm:pb-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <main class="pt-28 sm:pt-24 pb-8 sm:pb-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <!-- Включение секций из отдельных файлов (для модульности) -->
         <!-- SECTION 1: DASHBOARD - см. sections/dashboard.html -->
         <section id="sec-dashboard" class="space-y-8 animate-fade-in">
             <div class="mb-8">
-                <h1 class="text-3xl font-bold mb-2">Executive Summary: 10 Лет Инноваций</h1>
+                <h1 class="text-2xl sm:text-3xl font-bold mb-2">Executive Summary: 10 Лет Инноваций</h1>
                 <p class="text-brand-muted max-w-3xl">
                     Анализ мировых практик в создании лимитированных коллекций, спортивных коллабораций и премиального корпоративного мерча. 
-                    Цель: разработать концепцию физических носителей бренда к 10-летию PIN-UP / Redcore, покрывающую нужды от VIP-подарков до стадионных активаций.
+                    Цель: разработать концепцию физических носителей бренда к 10-летию PIN-UP / Redcore.
                 </p>
             </div>
 
             <!-- Charts Row -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-                <div class="bg-white p-6 rounded-xl border border-brand-gray shadow-sm">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-12">
+                <div class="bg-white p-4 sm:p-6 rounded-xl border border-brand-gray shadow-sm">
                     <h3 class="text-sm font-bold uppercase tracking-wide text-brand-muted mb-4">Баланс Источников (Корзины Поиска)</h3>
                     <div class="chart-container">
                         <canvas id="sourceRadarChart"></canvas>
                     </div>
                     <p class="text-xs text-center mt-2 text-brand-muted">Анализ показывает перевес в сторону Sportswear x Fashion для создания современного образа.</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl border border-brand-gray shadow-sm">
+                <div class="bg-white p-4 sm:p-6 rounded-xl border border-brand-gray shadow-sm">
                     <h3 class="text-sm font-bold uppercase tracking-wide text-brand-muted mb-4">Рекомендуемое распределение SKU</h3>
                     <div class="chart-container">
                         <canvas id="categoryDoughnutChart"></canvas>
@@ -106,7 +106,7 @@
 
             <!-- Key Insights -->
             <div>
-                <h2 class="text-2xl font-bold mb-6 border-b border-brand-gray pb-2">10 Доминирующих Паттернов (Global Trends 2024-2025)</h2>
+                <h2 class="text-xl sm:text-2xl font-bold mb-6 border-b border-brand-gray pb-2">10 Доминирующих Паттернов (Global Trends 2024-2026)</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="insights-grid">
                     <!-- Populated by JS -->
                 </div>
@@ -117,17 +117,17 @@
         <section id="sec-explorer" class="hide space-y-6 animate-fade-in">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
                 <div>
-                    <h1 class="text-3xl font-bold">База Референсов (Masterlist)</h1>
+                    <h1 class="text-2xl sm:text-3xl font-bold">База Референсов (Masterlist)</h1>
                     <p class="text-brand-muted">Отобранные примеры механик, материалов и дизайна.</p>
                 </div>
                 
                 <!-- Filters -->
-                <div class="flex flex-wrap gap-2">
-                    <button onclick="filterMerch('All')" class="filter-btn bg-brand-dark text-white px-4 py-2 rounded-full text-sm font-medium transition">Все</button>
-                    <button onclick="filterMerch('apparel')" class="filter-btn bg-white text-brand-dark border border-brand-gray hover:border-brand-dark px-4 py-2 rounded-full text-sm font-medium transition">Apparel</button>
-                    <button onclick="filterMerch('packaging')" class="filter-btn bg-white text-brand-dark border border-brand-gray hover:border-brand-dark px-4 py-2 rounded-full text-sm font-medium transition">Packaging</button>
-                    <button onclick="filterMerch('gifting')" class="filter-btn bg-white text-brand-dark border border-brand-gray hover:border-brand-dark px-4 py-2 rounded-full text-sm font-medium transition">VIP Gifting</button>
-                    <button onclick="filterMerch('accessories')" class="filter-btn bg-white text-brand-dark border border-brand-gray hover:border-brand-dark px-4 py-2 rounded-full text-sm font-medium transition">Accessories</button>
+                <div class="mobile-chip-row flex gap-2 overflow-x-auto w-full md:w-auto pb-1">
+                    <button onclick="filterMerch('All')" class="filter-btn bg-brand-dark text-white px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap shrink-0">Все</button>
+                    <button onclick="filterMerch('apparel')" class="filter-btn bg-white text-brand-dark border border-brand-gray hover:border-brand-dark px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap shrink-0">Apparel</button>
+                    <button onclick="filterMerch('packaging')" class="filter-btn bg-white text-brand-dark border border-brand-gray hover:border-brand-dark px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap shrink-0">Packaging</button>
+                    <button onclick="filterMerch('gifting')" class="filter-btn bg-white text-brand-dark border border-brand-gray hover:border-brand-dark px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap shrink-0">VIP Gifting</button>
+                    <button onclick="filterMerch('accessories')" class="filter-btn bg-white text-brand-dark border border-brand-gray hover:border-brand-dark px-4 py-2 rounded-full text-sm font-medium transition whitespace-nowrap shrink-0">Accessories</button>
                 </div>
             </div>
 
@@ -140,64 +140,64 @@
         <!-- SECTION 3: STRATEGY - см. sections/strategy.html -->
         <section id="sec-strategy" class="hide space-y-8 animate-fade-in">
             <div class="mb-8">
-                <h1 class="text-3xl font-bold mb-2">Стратегия: Концепты для PIN-UP 10Y</h1>
+                <h1 class="text-2xl sm:text-3xl font-bold mb-2">Стратегия: Концепты для PIN-UP 10Y</h1>
                 <p class="text-brand-muted max-w-3xl">
                     На основе собранных референсов сформированы 3 направления для разных аудиторий и бюджетов, а также 10 конкретных идей для имплементации.
                 </p>
             </div>
 
             <!-- Collections -->
-            <h2 class="text-2xl font-bold mb-6 border-b border-brand-gray pb-2">3 Направления Коллекции</h2>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+            <h2 class="text-xl sm:text-2xl font-bold mb-6 border-b border-brand-gray pb-2">3 Направления Коллекции</h2>
+            <div class="strategy-grid grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 sm:gap-6 mb-12">
                 <!-- Concept 1 -->
-                <div class="bg-white rounded-xl border border-brand-gray overflow-hidden shadow-sm flex flex-col">
+                <div class="strategy-card bg-white rounded-xl border border-brand-gray overflow-hidden shadow-sm flex flex-col">
                     <div class="h-2 bg-brand-red w-full"></div>
-                    <div class="p-6 flex-grow">
+                    <div class="strategy-card-body p-5 sm:p-6 flex-grow">
                         <div class="text-xs font-mono text-brand-muted mb-2">DIR 01</div>
-                        <h3 class="text-xl font-bold mb-2">"Heritage Stadium"</h3>
-                        <p class="text-sm text-brand-muted mb-4">Спортивная эстетика с отсылками к футбольным архивам (Sevilla FC). Тяжелый хлопок, вышивка гербов.</p>
-                        <ul class="text-sm space-y-2 mb-6">
-                            <li class="flex items-start"><span class="mr-2">▪️</span> <b>Аудитория:</b> Фан-база, Ивенты, Сотрудники (масс).</li>
-                            <li class="flex items-start"><span class="mr-2">▪️</span> <b>SKU:</b> Ретро-джерси, Жаккардовый шарф, Varsity куртка.</li>
-                            <li class="flex items-start"><span class="mr-2">▪️</span> <b>Техники:</b> Chenille патчи, плотная вышивка (crest).</li>
+                        <h3 class="strategy-card-title text-lg sm:text-xl font-bold mb-2">"Heritage Stadium"</h3>
+                        <p class="strategy-card-summary text-sm text-brand-muted mb-4">Спортивная эстетика с отсылками к футбольным архивам (Sevilla FC). Тяжелый хлопок, вышивка гербов.</p>
+                        <ul class="strategy-list text-sm mb-0">
+                            <li><span class="strategy-bullet">▪</span><span><b>Аудитория:</b> Фан-база, Ивенты, Сотрудники (масс).</span></li>
+                            <li><span class="strategy-bullet">▪</span><span><b>SKU:</b> Ретро-джерси, Жаккардовый шарф, Varsity куртка.</span></li>
+                            <li><span class="strategy-bullet">▪</span><span><b>Техники:</b> Chenille патчи, плотная вышивка (crest).</span></li>
                         </ul>
                     </div>
                 </div>
                 <!-- Concept 2 -->
-                <div class="bg-gray-900 text-white rounded-xl overflow-hidden shadow-md flex flex-col">
+                <div class="strategy-card bg-gray-900 text-white rounded-xl overflow-hidden shadow-md flex flex-col">
                     <div class="h-2 bg-gray-700 w-full"></div>
-                    <div class="p-6 flex-grow">
+                    <div class="strategy-card-body p-5 sm:p-6 flex-grow">
                         <div class="text-xs font-mono text-gray-400 mb-2">DIR 02</div>
-                        <h3 class="text-xl font-bold mb-2">"Quiet Luxury Tech"</h3>
-                        <p class="text-sm text-gray-400 mb-4">Премиальный корпоративный мерч. Минимализм, монохром, высокотехнологичные ткани.</p>
-                        <ul class="text-sm space-y-2 mb-6 text-gray-300">
-                            <li class="flex items-start"><span class="mr-2 text-gray-500">▪️</span> <b>Аудитория:</b> Топ-менеджмент, B2B Партнеры.</li>
-                            <li class="flex items-start"><span class="mr-2 text-gray-500">▪️</span> <b>SKU:</b> Ветровка со скрытыми карманами, Premium Tote, Металлический пин.</li>
-                            <li class="flex items-start"><span class="mr-2 text-gray-500">▪️</span> <b>Техники:</b> Tonal embroidery (тон в тон), Deboss на коже.</li>
+                        <h3 class="strategy-card-title text-lg sm:text-xl font-bold mb-2">"Quiet Luxury Tech"</h3>
+                        <p class="strategy-card-summary text-sm text-gray-400 mb-4">Премиальный корпоративный мерч. Минимализм, монохром, высокотехнологичные ткани.</p>
+                        <ul class="strategy-list text-sm mb-0 text-gray-300">
+                            <li><span class="strategy-bullet text-gray-500">▪</span><span><b>Аудитория:</b> Топ-менеджмент, B2B Партнеры.</span></li>
+                            <li><span class="strategy-bullet text-gray-500">▪</span><span><b>SKU:</b> Ветровка со скрытыми карманами, Premium Tote, Металлический пин.</span></li>
+                            <li><span class="strategy-bullet text-gray-500">▪</span><span><b>Техники:</b> Tonal embroidery (тон в тон), Deboss на коже.</span></li>
                         </ul>
                     </div>
                 </div>
                 <!-- Concept 3 -->
-                <div class="bg-white rounded-xl border border-brand-gray overflow-hidden shadow-sm flex flex-col relative">
+                <div class="strategy-card bg-white rounded-xl border border-brand-gray overflow-hidden shadow-sm flex flex-col relative">
                     <div class="absolute top-0 right-0 w-16 h-16 overflow-hidden">
                         <div class="absolute transform rotate-45 bg-yellow-400 text-black text-[10px] font-bold py-1 right-[-35px] top-[15px] w-[120px] text-center uppercase tracking-wider shadow-sm">Limited</div>
                     </div>
                     <div class="h-2 bg-gradient-to-r from-purple-500 to-pink-500 w-full"></div>
-                    <div class="p-6 flex-grow">
+                    <div class="strategy-card-body p-5 sm:p-6 flex-grow">
                         <div class="text-xs font-mono text-brand-muted mb-2">DIR 03</div>
-                        <h3 class="text-xl font-bold mb-2">"The Vault Drop"</h3>
-                        <p class="text-sm text-brand-muted mb-4">Стритвир подход. Искусственный дефицит, сложный анпакинг, нумерация.</p>
-                        <ul class="text-sm space-y-2 mb-6">
-                            <li class="flex items-start"><span class="mr-2">▪️</span> <b>Аудитория:</b> Инфлюенсеры, VIP, амбассадоры.</li>
-                            <li class="flex items-start"><span class="mr-2">▪️</span> <b>SKU:</b> Оверсайз худи 450g, Кастомный кейс (PR-box), Коллекционная карта.</li>
-                            <li class="flex items-start"><span class="mr-2">▪️</span> <b>Техники:</b> Puff print, металлические шильдики с серийным номером (001/100).</li>
+                        <h3 class="strategy-card-title text-lg sm:text-xl font-bold mb-2">"The Vault Drop"</h3>
+                        <p class="strategy-card-summary text-sm text-brand-muted mb-4">Стритвир подход. Искусственный дефицит, сложный анпакинг, нумерация.</p>
+                        <ul class="strategy-list text-sm mb-0">
+                            <li><span class="strategy-bullet">▪</span><span><b>Аудитория:</b> Инфлюенсеры, VIP, амбассадоры.</span></li>
+                            <li><span class="strategy-bullet">▪</span><span><b>SKU:</b> Оверсайз худи 450g, Кастомный кейс (PR-box), Коллекционная карта.</span></li>
+                            <li><span class="strategy-bullet">▪</span><span><b>Техники:</b> Puff print, металлические шильдики с серийным номером (001/100).</span></li>
                         </ul>
                     </div>
                 </div>
             </div>
 
             <!-- 10 Ideas List -->
-            <h2 class="text-2xl font-bold mb-6 border-b border-brand-gray pb-2">5 Механик для Имплементации</h2>
+            <h2 class="text-xl sm:text-2xl font-bold mb-6 border-b border-brand-gray pb-2">5 Механик для Имплементации</h2>
             <div class="bg-white rounded-xl border border-brand-gray shadow-sm p-0 overflow-hidden">
                 <ul class="divide-y divide-brand-gray" id="ideas-list">
                     <!-- Populated by JS -->
@@ -209,12 +209,12 @@
 
     <!-- Modal for Item Details -->
     <!-- Модальное окно для детального просмотра референсов -->
-    <div id="item-modal" class="fixed inset-0 z-[100] hide flex items-center justify-center p-4">
+    <div id="item-modal" class="fixed inset-0 z-[100] hide flex items-end sm:items-center justify-center p-0 sm:p-4">
         <!-- Backdrop -->
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeModal()"></div>
         <!-- Content -->
-        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto relative z-10">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-brand-muted hover:text-brand-dark text-2xl leading-none">&times;</button>
+        <div class="bg-white rounded-t-2xl sm:rounded-2xl shadow-2xl w-full max-w-2xl max-h-[92dvh] sm:max-h-[90vh] overflow-y-auto relative z-10">
+            <button onclick="closeModal()" class="absolute top-3 right-3 sm:top-4 sm:right-4 text-brand-muted hover:text-brand-dark text-2xl leading-none bg-white/80 rounded-full w-9 h-9 flex items-center justify-center">&times;</button>
             <div id="modal-content" class="p-0">
                 <!-- Injected via JS -->
             </div>
@@ -223,7 +223,8 @@
 
     <!-- JavaScript Logic -->
     <!-- Скрипт для управления UI, данными и взаимодействиями -->
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/ui.js"></script>
 </body>
 </html>
 
