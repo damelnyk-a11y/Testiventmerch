@@ -1,83 +1,147 @@
-﻿{
-    "REF-001":  [
-                    "cover.png"
-                ],
-    "REF-002":  [
-                    "cover.jpg"
-                ],
-    "REF-003":  [
-                    "cover.png"
-                ],
-    "REF-004":  [
-                    "cover.png"
-                ],
-    "REF-005":  [
-                    "cover.png"
-                ],
-    "REF-006":  [
-                    "cover.png"
-                ],
-    "REF-007":  [
-                    "cover.png"
-                ],
-    "REF-008":  [
-                    "cover.png"
-                ],
-    "REF-009":  [
-                    "cover.jpg",
-                    "OIP-3847572524.jpg",
-                    "OIP-635692317.jpg"
-                ],
-    "REF-010":  [
-                    "cover.jpg",
-                    "OIP-1648819382.jpg",
-                    "OIP-1824809790.jpg",
-                    "OIP-517313183.jpg"
-                ],
-    "REF-011":  [
-                    "cover.jpg",
-                    "OIP-1376169373.jpg",
-                    "OIP-2300905734.jpg",
-                    "OIP-2742447194.jpg"
-                ],
-    "REF-012":  [
-                    "cover.jpg",
-                    "M0V3R24WA1-1221606209.jpg",
-                    "OIP-2429799333.jpg"
-                ],
-    "REF-013":  [
-                    "cover.jpg",
-                    "OIP-1776852653.jpg",
-                    "OIP-179134391.jpg",
-                    "OIP-2719440325.jpg"
-                ],
-    "REF-014":  [
-                    "cover.jpg",
-                    "OIP-1005876801.jpg",
-                    "OIP-540564505.jpg",
-                    "OIP-690122381.jpg"
-                ],
-    "REF-015":  [
-                    "cover.jpg",
-                    "OIP-3089489885.jpg",
-                    "OIP-3751557085.jpg"
-                ],
-    "REF-016":  [
-                    "cover.jpg",
-                    "OIP-1106870933.jpg",
-                    "OIP-1845525345.jpg",
-                    "OIP-3469744579.jpg"
-                ],
-    "REF-017":  [
-                    "cover.jpg",
-                    "OIP-1550260157.jpg",
-                    "OIP-3529933013.jpg"
-                ],
-    "REF-018":  [
-                    "cover.jpg",
-                    "OIP-2714529739.jpg",
-                    "OIP-2969687181.jpg",
-                    "OIP-3103264869.jpg",
-                    "OIP-4089665757.jpg"
-                ]
+{
+  "REF-001": [
+    "cover.png"
+  ],
+  "REF-002": [
+    "cover.jpg"
+  ],
+  "REF-003": [
+    "cover.png"
+  ],
+  "REF-004": [
+    "cover.png"
+  ],
+  "REF-005": [
+    "cover.png"
+  ],
+  "REF-006": [
+    "cover.png"
+  ],
+  "REF-007": [
+    "cover.png"
+  ],
+  "REF-008": [
+    "cover.png"
+  ],
+  "REF-009": [
+    "cover.jpg",
+    "OIP-3847572524.jpg",
+    "OIP-635692317.jpg"
+  ],
+  "REF-010": [
+    "cover.jpg",
+    "OIP-1648819382.jpg",
+    "OIP-1824809790.jpg",
+    "OIP-517313183.jpg"
+  ],
+  "REF-011": [
+    "cover.jpg",
+    "OIP-1376169373.jpg",
+    "OIP-2300905734.jpg",
+    "OIP-2742447194.jpg"
+  ],
+  "REF-012": [
+    "cover.jpg",
+    "M0V3R24WA1-1221606209.jpg",
+    "OIP-2429799333.jpg"
+  ],
+  "REF-013": [
+    "cover.jpg",
+    "OIP-1776852653.jpg",
+    "OIP-179134391.jpg",
+    "OIP-2719440325.jpg"
+  ],
+  "REF-014": [
+    "cover.jpg",
+    "OIP-1005876801.jpg",
+    "OIP-540564505.jpg",
+    "OIP-690122381.jpg"
+  ],
+  "REF-015": [
+    "cover.jpg",
+    "OIP-3089489885.jpg",
+    "OIP-3751557085.jpg"
+  ],
+  "REF-016": [
+    "cover.jpg",
+    "OIP-1106870933.jpg",
+    "OIP-1845525345.jpg",
+    "OIP-3469744579.jpg"
+  ],
+  "REF-017": [
+    "cover.jpg",
+    "OIP-1550260157.jpg",
+    "OIP-3529933013.jpg"
+  ],
+  "REF-018": [
+    "cover.jpg",
+    "OIP-2714529739.jpg",
+    "OIP-2969687181.jpg",
+    "OIP-3103264869.jpg",
+    "OIP-4089665757.jpg"
+  ],
+  "REF-019": [
+    "cover.webp",
+    "OMEA305G24-A13_01.webp",
+    "OMEA305G24-A13_02_43a24960-c182-4581-99ec-44c9cfa4a12d_1600x.webp",
+    "OMEA305G24-A13_04_1600x.webp"
+  ],
+  "REF-020": [
+    "cover.jpeg",
+    "download (1).jpeg",
+    "download (2).jpeg"
+  ],
+  "REF-021": [
+    "cover.jpeg",
+    "download (1).jpeg",
+    "download (2).jpeg"
+  ],
+  "REF-022": [
+    "cover.jpeg",
+    "download (2).jpeg",
+    "download.jpeg"
+  ],
+  "REF-023": [
+    "cover.jpeg",
+    "download (1).jpeg",
+    "download (2).jpeg"
+  ],
+  "REF-024": [
+    " cover.webp"
+  ],
+  "REF-025": [
+    "cover.jpeg",
+    "download (2).jpeg",
+    "download.jpeg"
+  ],
+  "REF-026": [
+    "cover.jpeg"
+  ],
+  "REF-027": [
+    "cover.jpeg",
+    "download (1).jpeg",
+    "download (2).jpeg"
+  ],
+  "REF-028": [
+    "cover.jpeg",
+    "download (1).jpeg",
+    "download (2).jpeg",
+    "download (3).jpeg",
+    "download.jpeg"
+  ],
+  "REF-029": [
+    "cover.jpeg",
+    "download (2).jpeg",
+    "download.jpeg",
+    "images (1).jpeg",
+    "images (2).jpeg",
+    "images.jpeg"
+  ],
+  "REF-030": [
+    "cover.jpeg",
+    "download (1).jpeg",
+    "download (2).jpeg",
+    "download (3).jpeg",
+    "download.jpeg"
+  ]
 }
