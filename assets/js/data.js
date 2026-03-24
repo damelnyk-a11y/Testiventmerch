@@ -639,6 +639,24 @@ const merchData = [
         vibe: "linear-gradient(135deg, #000000 50%, #c53030 50%)",
         ...createRefMedia("REF-030", []),
         links: ["https://www.instagram.com"]
+    },
+    {
+        id: "REF-031",
+        brand: "Conversion Club (Affiliate Community Merch)",
+        year: "2024",
+        category: "apparel",
+        item: "Oversized Hoodie",
+        idea: "Networking & Business-Hype. Balancing crypto-billionaire style with oversized streetwear.",
+        design: "Minimal but large logos, heavy cotton, debossed logos, branded slogans on back, matte black with glossy red accents.",
+        tech: "Debossing, engraving on hardware, heavy cotton fabric.",
+        packaging: "Standard",
+        price: "premium",
+        relevance: "Direct reference for merch for top partners and arbitrageurs at conferences. Conversion Club makes things that don't look like giveaway material but as a full brand clothing.",
+        takeaways: ["Debossing or engraving on zippers and rivets", "Branded slogans on back with industry-specific offers", "Limited drops for closed 10-year events", "Matte black base with glossy red touches"],
+        tags: ["affiliate", "networking", "premium", "limited"],
+        vibe: "linear-gradient(135deg, #000000 50%, #dc2626 50%)",
+        ...createRefMedia("REF-031", []),
+        links: ["https://conversionclub.com"]
     }
 ];
 
